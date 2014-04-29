@@ -45,7 +45,6 @@ def get_performance_list():
     except:
         print('fail to access {}'.format(url))
         return []
-    print(html)
     soup = BeautifulSoup(html)
     list = soup.find('div', attrs={'class': 'order-list'})
     shows = list.find_all('div', class_='order-list-show')
